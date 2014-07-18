@@ -10,6 +10,17 @@ namespace Essential_L1
     {
         static void Main(string[] args)
         {
+            Address myAddress = new Address
+            {
+                Index = 20191,
+                Country = "US",
+                City = "Reston",
+                Street = "Sentinel Point Ct",
+                House = "11947"
+            };
+
+            Console.WriteLine(myAddress);
+            Console.ReadKey();
         }
     }
 }
