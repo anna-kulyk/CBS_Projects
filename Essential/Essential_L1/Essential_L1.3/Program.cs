@@ -10,6 +10,14 @@ namespace Essential_L1._3
     {
         static void Main(string[] args)
         {
+            var myFigure = new Figure
+            (
+                new Point(4, 2, "A"),
+                new Point(7, 7, "B"),
+                new Point(8, -1, "C")
+            );
+
+            myFigure.PerimeterCalculator();
         }
     }
 }

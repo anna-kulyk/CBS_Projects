@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L1.1", "Essential
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L1.2", "Essential_L1.2\Essential_L1.2.csproj", "{5156521F-0A6F-495C-AC98-553AB34C4825}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L1.3", "Essential_L1.3\Essential_L1.3.csproj", "{3E603F6A-857A-4593-BA6F-B718A12A4F28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,16 @@ Global
 		{5156521F-0A6F-495C-AC98-553AB34C4825}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5156521F-0A6F-495C-AC98-553AB34C4825}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5156521F-0A6F-495C-AC98-553AB34C4825}.Release|x64.ActiveCfg = Release|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E603F6A-857A-4593-BA6F-B718A12A4F28}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
