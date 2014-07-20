@@ -7,30 +7,18 @@ using System.Threading.Tasks;
 namespace Essential_L1._3
 {
     class Point
-    {
-        private int _x, _y;
-        private string _pointName;
-
+    {        
         public Point(int x, int y, string pointName)
         {
-            _x = x;
-            _y = y;
-            _pointName = pointName;
+            X = x;
+            Y = y;
+            PointName = pointName;
         }
 
-        public int X
-        {
-            get { return _x; }
-        }
+        public int X { get; private set; }
 
-        public int Y
-        {
-            get { return _y; }
-        }
+        public int Y { get; private set; }
 
-        public string PointName
-        {
-            get { return _pointName; }
-        }
+        public string PointName { get; private set; }
     }
 }
