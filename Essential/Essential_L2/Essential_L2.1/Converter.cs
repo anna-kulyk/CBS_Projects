@@ -21,50 +21,50 @@ namespace Essential_L2._1
         public double Eur { get; private set; }
         public double Rub { get; private set; }
 
-        public void CurrencyConverter(string currencyFrom, string currencyTo, double sum)
+        public void CurrencyConverter(Currency currencyFrom, Currency currencyTo, double sum)
         {
             double result;
 
-            if (currencyFrom.ToLower() == "uah")
+            if (currencyFrom == Currency.UAH)
             {
-                switch (currencyTo.ToLower())
+                switch (currencyTo)
                 {
-                    case "usd":
-                        Console.WriteLine("{0:N} UAH equals to {1:N} {2}", sum, result = (sum / Usd),currencyTo.ToUpper());
+                    case Currency.USD:
+                        Console.WriteLine("{0:N} UAH equals to {1:N} USD", sum, result = (sum / Usd));
                         break;
-                    case "eur":
-                        Console.WriteLine("{0:N} UAH equals to {1:N} {2}", sum, result = (sum / Eur), currencyTo.ToUpper());
+                    case Currency.EUR:
+                        Console.WriteLine("{0:N} UAH equals to {1:N} EUR", sum, result = (sum / Eur));
                         break;
-                    case "rub":
-                        Console.WriteLine("{0:N} UAH equals to {1:N} {2}", sum, result = (sum / Rub), currencyTo.ToUpper());
+                    case Currency.RUB:
+                        Console.WriteLine("{0:N} UAH equals to {1:N} RUB", sum, result = (sum / Rub));
                         break;
-                    case "uah":
+                    case Currency.UAH:
                         Console.WriteLine("{0:N} UAH equals to {0:N} UAH", sum);
                         break;
                     default:
-                        Console.WriteLine("Error! The program cannot convert UAH to {0}!", currencyTo.ToUpper());
+                        Console.WriteLine("Error! The program cannot convert UAH to {0}!", currencyTo);
                         break;
                 }
 
             }
-            else if (currencyTo.ToLower() == "uah")
+            else if (currencyTo == Currency.UAH)
             {
-                switch (currencyFrom.ToLower())
+                switch (currencyFrom)
                 {
-                    case "usd":
-                        Console.WriteLine("{0:N} {2} equals to {1:N} UAH", sum, result = (sum * Usd), currencyFrom.ToUpper());
+                    case Currency.USD:
+                        Console.WriteLine("{0:N} USD equals to {1:N} UAH", sum, result = (sum * Usd));
                         break;
-                    case "eur":
-                        Console.WriteLine("{0:N} {2} equals to {1:N} UAH", sum, result = (sum * Eur), currencyFrom.ToUpper());
+                    case Currency.EUR:
+                        Console.WriteLine("{0:N} EUR equals to {1:N} UAH", sum, result = (sum * Eur));
                         break;
-                    case "rub":
-                        Console.WriteLine("{0:N} {2} equals to {1:N} UAH", sum, result = (sum * Rub), currencyFrom.ToUpper());
+                    case Currency.RUB:
+                        Console.WriteLine("{0:N} RUB equals to {1:N} UAH", sum, result = (sum * Rub));
                         break;
-                    case "uah":
+                    case Currency.UAH:
                         Console.WriteLine("{0:N} UAH equals to {0:N} UAH", sum);
                         break;
                     default:
-                        Console.WriteLine("Error! The program cannot convert {0} to UAH!", currencyFrom.ToUpper());
+                        Console.WriteLine("Error! The program cannot convert {0} to UAH!", currencyFrom);
                         break;
                 }
 
