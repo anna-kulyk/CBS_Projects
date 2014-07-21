@@ -27,6 +27,13 @@ namespace Essential_L2
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public uint Age { get; private set; }
+        public DateTime Date
+        {
+            get
+            {
+                return _date;
+            }
+        }
 
         public override string ToString()
         {

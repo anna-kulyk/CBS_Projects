@@ -11,7 +11,7 @@ namespace Essential_L2
         static void Main(string[] args)
         {
             var newUser = new User("hermy", "Anna", "Kulyk", 25);
-
+            
             Console.WriteLine(newUser.ToString());
         }
     }
