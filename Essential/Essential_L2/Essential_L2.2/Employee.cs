@@ -26,7 +26,7 @@ namespace Essential_L2._2
         {
             get
             {
-                if (_employeePost == 0)
+                if (_employeePost == Post.Default)
                 {
                     Console.WriteLine("The employee's post wasn't specified");
                 }
