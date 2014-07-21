@@ -8,7 +8,7 @@ namespace Essential_L2._2
 {
     enum Post
     {
-        Default,
+        None,
         Manager,
         Accountant,
         Programer

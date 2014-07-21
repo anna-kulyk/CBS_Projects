@@ -26,7 +26,7 @@ namespace Essential_L2._2
         {
             get
             {
-                if (_employeePost == Post.Default)
+                if (_employeePost == Post.None)
                 {
                     Console.WriteLine("The employee's post wasn't specified");
                 }
@@ -40,7 +40,7 @@ namespace Essential_L2._2
         public void EmployeeInformation()
         {
             Console.WriteLine("Name: {1}{0}Surname: {2}", Environment.NewLine, Name, Surname);
-            if (EmployeePost != Post.Default)
+            if (EmployeePost != Post.None)
             { Console.WriteLine("Post: {1}{0}Salary: {2}{0}Income Tax: {3}", Environment.NewLine, EmployeePost, Salary, IncomeTax); }
         }
 
@@ -74,7 +74,7 @@ namespace Essential_L2._2
             set { _incomeTax = value; }
         }
 
-        public void SalaryCounter()
+        private void SalaryCounter()
         {
             switch (EmployeePost)
             {
@@ -100,21 +100,17 @@ namespace Essential_L2._2
                     }
             }
 
-            if (Experience < 2)
-            {
-                _salary *= 1;
-            }
-            else if (Experience >= 2 && Experience < 5)
+            if (Experience >= 2 && Experience < 5)
             {
                 _salary *= 1.25;
             }
-            else
+            else if (Experience >= 5)
             {
                 _salary *= 1.5;
             }
         }
 
-        public void Tax()
+        private void Tax()
         {
             if (_salary == 0)
             {
