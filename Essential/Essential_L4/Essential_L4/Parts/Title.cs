@@ -8,20 +8,7 @@ namespace Essential_L4
 {
     class Title : DocumentParts
     {
-        public override string Content
-        {
-            get 
-            {
-                if (content != null)
-                    return content;
-                else
-                    return "Заголовок отсутствует.";
-            }
-            set 
-            {
-                content = value; 
-            }
-        }
+        protected override string EmptyContentErrorMessage { get {return "Заголовок отсутствует.";} }
 
         protected override ConsoleColor ShowForegroundColor
         {

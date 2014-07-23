@@ -7,22 +7,9 @@ using System.Threading.Tasks;
 namespace Essential_L4
 {
     class Body : DocumentParts
-    {        
-        public override string Content
-        {
-            get
-            {
-                if (content != null)
-                    return content;
-                else
-                    return "Тело документа отсутствует.";
-            }
-            set
-            {
-                content = value;
-            }
-        }
-
+    {
+        protected override string EmptyContentErrorMessage { get { return "Тело документа отсутствует."; } }
+        
         protected override ConsoleColor ShowForegroundColor
         {
             get
