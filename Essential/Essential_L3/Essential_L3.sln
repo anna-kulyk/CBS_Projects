@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L3", "Essential_L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L3.1", "Essential_L3.1\Essential_L3.1.csproj", "{6E3BE3EC-8581-4FB3-BD21-FCB5F8487A9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L3.2", "Essential_L3.2\Essential_L3.2.csproj", "{1EACD300-CB6D-401F-AAA0-284B5BBD1E34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6E3BE3EC-8581-4FB3-BD21-FCB5F8487A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E3BE3EC-8581-4FB3-BD21-FCB5F8487A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E3BE3EC-8581-4FB3-BD21-FCB5F8487A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EACD300-CB6D-401F-AAA0-284B5BBD1E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EACD300-CB6D-401F-AAA0-284B5BBD1E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EACD300-CB6D-401F-AAA0-284B5BBD1E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EACD300-CB6D-401F-AAA0-284B5BBD1E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
