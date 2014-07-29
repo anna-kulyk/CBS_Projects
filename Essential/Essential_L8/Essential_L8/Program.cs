@@ -15,15 +15,11 @@ namespace Essential_L8
             DateTime now = DateTime.Now;            
             DateTime nextBirthday = new DateTime(now.Year, birthday.Month, birthday.Day);
             TimeSpan delta;
-            if (nextBirthday.DayOfYear > now.DayOfYear)
+            if (nextBirthday.DayOfYear <= now.DayOfYear)
             {
-                delta = nextBirthday - now;
-            }                      
-            else
-            {
-                DateTime _nextBirthday = new DateTime(now.Year + 1, birthday.Month, birthday.Day);
-                delta = _nextBirthday - now;
-            }   
+                nextBirthday = new DateTime(now.Year + 1, birthday.Month, birthday.Day);
+            }
+            delta = nextBirthday - now;
             Console.WriteLine((delta.Days + 1) + " day(s) left till your next birthday!");
         }
     }
