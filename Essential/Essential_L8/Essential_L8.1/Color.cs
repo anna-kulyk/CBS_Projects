@@ -8,7 +8,7 @@ namespace Essential_L8._1
 {
     enum Color
     {        
-        Gray = 0,
+        None = 0,
         Blue = 1,
         Green = 2,
         Red = 3

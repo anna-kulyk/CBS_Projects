@@ -8,35 +8,19 @@ namespace Essential_L8._1
 {
     static class Printer
     {
-        static public void Print(string pString, int color)
+        static public void Print(string pString, string color)
         {
-            ConsoleColor fgColor = new ConsoleColor();
-            switch(color)
+            Color colorValue;           
+            if (Enum.TryParse(color, true, out colorValue))
             {
-                case (int)Color.Blue:
-                    {
-                        fgColor = ConsoleColor.Blue;
-                        break;
-                    }
-                case (int)Color.Green:
-                    {
-                        fgColor = ConsoleColor.Green;
-                        break;
-                    }
-                case (int)Color.Red:
-                    {
-                        fgColor = ConsoleColor.Red;
-                        break;
-                    }
-                default:
-                    {
-                        fgColor = ConsoleColor.Gray;
-                        break;
-                    }
+                Console.ForegroundColor = colorValue.ToConsoleColor();
+                Console.WriteLine(pString);
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
-            Console.ForegroundColor = fgColor;
-            Console.WriteLine(pString);
-            Console.ForegroundColor = ConsoleColor.Gray;
+            else
+            {
+                Console.WriteLine("{0} is not a member of the Color enumeration.", color);
+            }   
         }
 
     }
