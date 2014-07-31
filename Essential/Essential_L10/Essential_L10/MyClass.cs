@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Essential_L10
 {
-    class MyClass<T>
+    class MyClass<T> where T: new ()
     {
         static public T FactoryMethod()
         {
-            T mc = default(T);
+            T mc = new T();
             return mc;
         }
     }
