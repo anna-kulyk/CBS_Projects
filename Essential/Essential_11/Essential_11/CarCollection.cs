@@ -27,6 +27,11 @@ namespace Essential_11
 
         }
 
+        public void Clear()
+        {
+            cars = new T[0];
+        }
+
         public string this[int index]
         {
             get
