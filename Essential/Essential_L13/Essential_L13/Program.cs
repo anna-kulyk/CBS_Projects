@@ -7,23 +7,22 @@ using System.Threading;
 namespace Essential_L13
 {
     class Program
-    {
-        static int count = 5;
-
-        static void MyMethod()
+    {        
+        static void MyMethod(object count)
         {
-            Console.WriteLine("Thread: {0}, count = {1}", Thread.CurrentThread.GetHashCode(), count);
-            if (count > 0)
+            Console.WriteLine("Thread: {0}, count = {1}", Thread.CurrentThread.ManagedThreadId, count);
+            if ((int)count > 0)
             {
-                --count;
-                Thread th = new Thread(MyMethod);
-                th.Start();
+                count = (int)count - 1;
+                ParameterizedThreadStart myMethod = new ParameterizedThreadStart(MyMethod);
+                Thread th = new Thread(myMethod);
+                th.Start(count);
             }
         }
 
         static void Main(string[] args)
         {
-            MyMethod();
+            MyMethod((object)5);
         }
     }
 }
