@@ -20,68 +20,63 @@ namespace Essential_L12._2
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly Calculator newCalc = new Calculator();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {   
-            double op1 = Convert.ToDouble(operand1.Text);
-            double op2 = Convert.ToDouble(operand2.Text);
-            double r = 0;
+        {
+            var newRequest = new OperationRequest();
+            newRequest.Operand1 = Convert.ToDouble(operand1.Text);
+            newRequest.Operand2 = Convert.ToDouble(operand2.Text);            
             Button clickedButton = (Button)sender;
-            switch((string)clickedButton.Content)
+            newRequest.Operation = ReadButton(clickedButton);
+            var newResponse = newCalc.Calculate(newRequest);
+            if (newResponse.Error == null)
+            {
+                result.Text = Convert.ToString(newResponse.Result); 
+            }
+            else
+            {
+                MessageBox.Show(newResponse.Error);
+            }
+        }
+
+        private Operations ReadButton(Button button)
+        {
+            Operations operation;
+            switch ((string)button.Content)
             {
                 case "+":
                     {
-                        r = Add(op1, op2);
+                        operation = Operations.Add;
                         break;
                     }
                 case "-":
                     {
-                        r = Subtract(op1, op2);
+                        operation = Operations.Subtract;
                         break;
                     }
                 case "*":
                     {
-                        r = Multiply(op1, op2);
+                        operation = Operations.Multiply;
                         break;
                     }
                 case "/":
                     {
-                        if (op2 == 0)
-                        {
-                            MessageBox.Show("ERROR: You cannot divide by zero!");
-                        }
-                        else
-                        {
-                            r = Divide(op1, op2);
-                        }                        
+                        operation = Operations.Divide;
                         break;
                     }
-            }            
-            result.Text = Convert.ToString(r);
-        }
-
-        public double Add(double a, double b)
-        {
-            return a + b;
-        }
-
-        public double Subtract(double a, double b)
-        {
-            return a - b;
-        }
-
-        public double Multiply(double a, double b)
-        {
-            return a * b;
-        }
-
-        public double Divide(double a, double b)
-        {
-            return a / b;
-        }
+                default:
+                    {
+                        operation = Operations.None;
+                        break;
+                    }
+            }
+            return operation;
+        }        
     }
 }
