@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L12", "Essential_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L12.1", "Essential_L12.1\Essential_L12.1.csproj", "{BFCABABD-93E4-432D-8155-8753BFE2AA6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L12.2", "Essential_L12.2\Essential_L12.2.csproj", "{913AABA8-B97C-4F83-9633-B5E6754A2671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,14 @@ Global
 		{BFCABABD-93E4-432D-8155-8753BFE2AA6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFCABABD-93E4-432D-8155-8753BFE2AA6B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BFCABABD-93E4-432D-8155-8753BFE2AA6B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{913AABA8-B97C-4F83-9633-B5E6754A2671}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
