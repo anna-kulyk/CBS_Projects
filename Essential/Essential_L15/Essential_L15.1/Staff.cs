@@ -41,7 +41,7 @@ namespace Essential_L15._1
                         Console.WriteLine(e.Message);
                         locker = true;
                     }
-                    catch (Exception e)
+                    catch (WrongYearException e)
                     {
                         Console.WriteLine(e.Message);
                         locker = true;

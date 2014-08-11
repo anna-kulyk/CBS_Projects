@@ -33,7 +33,7 @@ namespace Essential_L15._1
             {
                 if (value <= 0 || value > DateTime.Now.Year)
                 {
-                    throw new Exception("You have entered the wrong year!");
+                    throw new WrongYearException();
                 }
 
                 _year = value;
