@@ -23,9 +23,9 @@ namespace Essential_L16._1
 
         public override bool Equals(object obj)
         {
-            if (obj is Block)
-            {
-                Block block = (Block)obj;
+            var block = obj as Block;
+            if (block != null)
+            {                
                 if (this.AB == block.AB && this.BC == block.BC && this.CD == block.CD && this.DA == block.DA)
                 {
                     return true;
@@ -37,7 +37,7 @@ namespace Essential_L16._1
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return AB.GetHashCode() ^ BC.GetHashCode() ^ CD.GetHashCode() ^ DA.GetHashCode();
         }
 
         public override string ToString()
