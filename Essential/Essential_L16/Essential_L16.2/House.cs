@@ -21,13 +21,12 @@ namespace Essential_L16._2
 
         public House Clone()
         {
-            return this;
-            //return new House(this.Height, this.InnerArea, (Street)this.StreetName.Clone());
+            return new House(this.Height, this.InnerArea, this.StreetName);
         }
 
         public House DeepClone()
         {
-            return (House)this.MemberwiseClone();
+            return new House(this.Height, this.InnerArea, new Street(this.StreetName.Name));
         }
 
         public override string ToString()

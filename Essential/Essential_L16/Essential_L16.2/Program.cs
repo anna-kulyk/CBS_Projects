@@ -18,7 +18,7 @@ namespace Essential_L16._2
             Console.WriteLine(house3.ToString());
             Console.WriteLine(new string('-', 30));
             house1.Height = 27;
-            house1.StreetName = new Street("Iv.Shevcova");
+            house1.StreetName.Name = "Iv.Shevcova";
             Console.WriteLine(house1.ToString());
             Console.WriteLine(house2.ToString());
             Console.WriteLine(house3.ToString());

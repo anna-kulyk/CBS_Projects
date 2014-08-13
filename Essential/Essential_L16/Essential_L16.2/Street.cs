@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace Essential_L16._2
 {
-    class Street //: ICloneable
+    class Street
     {
         public Street(string name)
         {
             Name = name;
         }
 
-        public string Name;
-
-        //public object Clone()
-        //{
-        //    return new Street(this.Name);
-        //}
+        public string Name { get; set; }
     }
 }
