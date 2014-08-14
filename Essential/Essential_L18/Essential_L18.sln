@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L18", "Essential_L18\Essential_L18.csproj", "{D6729C96-1D99-469B-A3ED-554A49205254}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L18_exe", "Essential_L18.1\Essential_L18_exe.csproj", "{C5F355A2-6ABD-487B-AC2A-C0DF1355ADCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essential_L18_dll", "Essential_L18_dll\Essential_L18_dll.csproj", "{2F026AF3-AF29-4F88-8CCD-25B9BC75CD72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D6729C96-1D99-469B-A3ED-554A49205254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6729C96-1D99-469B-A3ED-554A49205254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6729C96-1D99-469B-A3ED-554A49205254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F355A2-6ABD-487B-AC2A-C0DF1355ADCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F355A2-6ABD-487B-AC2A-C0DF1355ADCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F355A2-6ABD-487B-AC2A-C0DF1355ADCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F355A2-6ABD-487B-AC2A-C0DF1355ADCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F026AF3-AF29-4F88-8CCD-25B9BC75CD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F026AF3-AF29-4F88-8CCD-25B9BC75CD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F026AF3-AF29-4F88-8CCD-25B9BC75CD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F026AF3-AF29-4F88-8CCD-25B9BC75CD72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
