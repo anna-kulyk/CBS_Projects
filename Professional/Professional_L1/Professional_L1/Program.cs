@@ -12,7 +12,7 @@ namespace Professional_L1
         {
             int[] integers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            Integers integersSquared = GetSquared(integers);
+            IEnumerable<int> integersSquared = GetSquared(integers);
 
             foreach (var item in integersSquared)
             {
@@ -20,16 +20,15 @@ namespace Professional_L1
             }
         }
 
-        static Integers GetSquared(int[] array)
-        {
-            int[] newArray = new int[array.Length];
-
+        static IEnumerable<int> GetSquared(int[] array)
+        { 
             for (int i = 0; i < array.Length; i++)
 			{
-                newArray[i] = array[i] * array[i];			 
+                if (array[i] % 2 !=0)
+                {
+                    yield return array[i] * array[i]; 
+                };			 
 			}
-
-            return new Integers(newArray);
         }
     }
 }
