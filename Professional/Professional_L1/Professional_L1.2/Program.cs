@@ -37,7 +37,7 @@ namespace Professional_L1._2
             familyTree.ShowHeirs("Draco Malfoy");
 
             Collection<Person> sorted = new Collection<Person>();
-            sorted.SelectByYear(familyTree, 1959);
+            familyTree.SelectByYear(sorted, 1959);
             foreach (var item in sorted)
             {
                 Console.WriteLine(item.Name);

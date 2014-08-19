@@ -44,24 +44,27 @@ namespace Professional_L1._2
         public static void ShowHeirs(this Collection<Person> persons, string parentName)
         {
             Person parent = persons.FindByName(parentName);
-            Console.WriteLine("{0} heirs:", parentName);
-            foreach (var item in parent.Heirs)
+            if (parent != null && parent.Heirs != null && parent.Heirs.Any())
             {
-                Console.WriteLine(item.Name);
-            }
+                Console.WriteLine("{0} heirs:", parentName);
+                foreach (var item in parent.Heirs)
+                {
+                    Console.WriteLine(item.Name);
+                } 
+            }            
         }
 
-        public static void SelectByYear(this Collection<Person> sortedByYear, Collection<Person> persons, uint year)
+        public static void SelectByYear(this Collection<Person> persons, Collection<Person> sortedByYear, uint year)
         {
             foreach (var person in persons)
             {
-                if (person.Year == year)
+                if (person.Year == year && !sortedByYear.Any(p => p.Name == person.Name))
                 {
                     sortedByYear.Add(person);
                 }
                 else if(person.Heirs != null && person.Heirs.Any())
                 {
-                    SelectByYear(sortedByYear, person.Heirs, year);
+                    SelectByYear(person.Heirs, sortedByYear, year);
                 }
             }
         }
