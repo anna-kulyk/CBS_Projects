@@ -13,14 +13,19 @@ namespace Professional_L3
     {
         static void Main(string[] args)
         {
-            DirectoryInfo myDirectory = new DirectoryInfo(@"H:/");
+            const string root = @"H:\";
+            const string folderNameTemplate = "Folder_{0}";
+            var path = Path.Combine(root, folderNameTemplate);
+
+            DirectoryInfo myDirectory = new DirectoryInfo(root);
             for (int i = 0; i < 100; i++)
             {
-                myDirectory.CreateSubdirectory(string.Format("Folder_{0}", i));
+                myDirectory.CreateSubdirectory(string.Format(folderNameTemplate, i));
             }
+
             for (int i = 0; i < 100; i++)
             {
-                Directory.Delete(string.Format(@"H:/Folder_{0}", i));
+                Directory.Delete(string.Format(path, i));
             }
             
         }
