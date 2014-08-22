@@ -31,14 +31,17 @@ namespace Professional_L3._2
                         else
                         {
                             FileInfo file = SearchFile(fileName, item.FullName);
-                            return file;
+                            if (file != null)
+                            {
+                                return file;
+                            }
+                            else
+                            {
+                                continue;
+                            }                            
                         }
                     }
-                }
-                else
-                {
-                    Console.WriteLine("Cannot find file {0}", fileName);
-                }
+                }                
                 return null;
             }
         }
