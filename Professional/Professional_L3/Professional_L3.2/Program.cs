@@ -38,6 +38,10 @@ namespace Professional_L3._2
                     }
                 }                
             }
+            else
+            {
+                Console.WriteLine("Cannot find file {0}", fileName);
+            }
             Console.ReadKey();            
         }
     }
