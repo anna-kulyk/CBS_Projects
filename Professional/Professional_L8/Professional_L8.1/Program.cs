@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Address;
 using System.Xml.Serialization;
 using System.Threading.Tasks;
 
@@ -17,11 +18,11 @@ namespace Professional_L8._1
     {
         static void Main(string[] args)
         {
-            var address = new Address { street = "11947 Sentinel Point Ct", city = "Reston, VA", country = "USA", zip = 20191 };
+            var address = new Address.Address { street = "11947 Sentinel Point Ct", city = "Reston, VA", country = "USA", zip = 20191 };
             var naddress = new NewAddress { street = "11703 Olde English Dr", appartment = "Unit I", city = "Reston, VA", country = "USA", zip = 20190 };
 
             var stream = new FileStream("First_Address.xml", FileMode.OpenOrCreate);
-            var serializer = new XmlSerializer(typeof(Address));
+            var serializer = new XmlSerializer(typeof(Address.Address));
             serializer.Serialize(stream, address);
             stream.Close();
 
