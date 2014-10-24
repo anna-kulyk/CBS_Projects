@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Threading.Tasks;
 
-namespace Professional_L8._1
+namespace Address
 {
     public class Address
     {
@@ -13,7 +13,5 @@ namespace Professional_L8._1
         public string city;
         public string country;
         public uint zip;
-
-        public Address() { }
     }
 }

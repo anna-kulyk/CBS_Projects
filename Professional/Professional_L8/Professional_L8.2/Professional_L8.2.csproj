@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89F7DFDB-E52B-4C77-B232-786581D4B983}</ProjectGuid>
+    <ProjectGuid>{20F0EA97-23CF-479D-8AD0-E849CA93B77B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Professional_L8._1</RootNamespace>
-    <AssemblyName>Professional_L8.1</AssemblyName>
+    <RootNamespace>Professional_L8._2</RootNamespace>
+    <AssemblyName>Professional_L8.2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
