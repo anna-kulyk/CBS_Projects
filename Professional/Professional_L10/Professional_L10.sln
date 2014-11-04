@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Professional_L10", "Professional_L10\Professional_L10.csproj", "{AC9903CC-EF92-457C-8C93-22D9C7C7291E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "BaseClass\Base.csproj", "{C77A785F-6544-4E27-8250-108FA942BA05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC9903CC-EF92-457C-8C93-22D9C7C7291E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC9903CC-EF92-457C-8C93-22D9C7C7291E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC9903CC-EF92-457C-8C93-22D9C7C7291E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC9903CC-EF92-457C-8C93-22D9C7C7291E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77A785F-6544-4E27-8250-108FA942BA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77A785F-6544-4E27-8250-108FA942BA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77A785F-6544-4E27-8250-108FA942BA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77A785F-6544-4E27-8250-108FA942BA05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
