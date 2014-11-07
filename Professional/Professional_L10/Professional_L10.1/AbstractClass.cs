@@ -8,8 +8,8 @@ namespace Professional_L10._1
 {
     public abstract class AbstractClass
     {
-        public abstract void PrimitiveOperation1();
-        public abstract void PrimitiveOperation2();
+        protected abstract void PrimitiveOperation1();
+        protected abstract void PrimitiveOperation2();
 
         public void TemplateMethod()
         {
