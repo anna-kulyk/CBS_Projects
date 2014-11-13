@@ -18,48 +18,18 @@ namespace Professional_L11._1
         private static object locker = new object();
         private static StreamWriter sw = new StreamWriter("Third.txt");
 
-        private static void ReadWrightFirst()
+        private static void ReadWrite(object sourceFileName)
         {
-            List<string> first = new List<string>();
-
-            using (StreamReader sr1 = new StreamReader("First.txt"))
+            using (var reader = new StreamReader((string)sourceFileName))
             {
-                while (!sr1.EndOfStream)
+                while (!reader.EndOfStream)
                 {
-                    first.Add(sr1.ReadLine());
-                }
-                
-            }
+                    var currentRead = reader.ReadLine();
 
-            foreach (var item in first)
-            {
-                lock(locker)
-                {
-                    sw.WriteLine(item);
-                    Thread.Sleep(100);
-                }                
-            }
-            
-        }
-
-        private static void ReadWrightSecond()
-        {
-            List<string> second = new List<string>();
-
-            using (StreamReader sr2 = new StreamReader("Second.txt"))
-            {
-                while (!sr2.EndOfStream)
-                {
-                    second.Add(sr2.ReadLine());
-                }
-
-            }
-
-            foreach (var item in second)
-            {
-                lock (locker)
-                {
-                    sw.WriteLine(item);
+                    lock (locker)
+                    {
+                        sw.WriteLine(currentRead);
+                    }
                     Thread.Sleep(100);
                 }
             }
@@ -67,12 +37,12 @@ namespace Professional_L11._1
 
         static void Main(string[] args)
         {
-            Thread[] treads = new Thread[] { new Thread(ReadWrightFirst), new Thread(ReadWrightSecond) };
-            for (int i = 0; i < treads.Length; i++)
-            {
-                treads[i].Start();
-                Thread.Sleep(50);
-            }
+            Thread[] treads = new Thread[] { new Thread(new ParameterizedThreadStart(ReadWrite)), new Thread(new ParameterizedThreadStart(ReadWrite)) };
+
+            treads[0].Start("First.txt");
+            Thread.Sleep(50);
+            treads[1].Start("Second.txt");
+
             for (int i = 0; i < treads.Length; i++)
             {
                 treads[i].Join();
