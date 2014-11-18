@@ -7,30 +7,30 @@ namespace Professional_L12._1
 
     class Program
     {
-        private static Mutex myMutex;
-
-        private static void DoWork(object num)
-        {
-            myMutex.WaitOne();
-
-            Console.WriteLine("Thread {0} has entered the protected area.", num);
-
-            Thread.Sleep(2000); // Do some work.
-
-            Console.WriteLine("Thread {0} is leaving the protected area", num);
-
-            myMutex.ReleaseMutex();
-        }
+        private const string uniqueMutexName = "Mutex12";     
 
         static void Main(string[] args)
         {
-            myMutex = new Mutex();
+            Mutex myMutex = null;
 
-            for (int i = 1; i < 9; i++)
+            try
             {
-                var thread = new Thread(new ParameterizedThreadStart(DoWork));
-                thread.Start(i);
+                myMutex = Mutex.OpenExisting(uniqueMutexName);
             }
+            catch (WaitHandleCannotBeOpenedException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            if (myMutex != null)
+            {
+                return;
+            }
+
+            myMutex = new Mutex(false, uniqueMutexName);
+
+            Console.WriteLine("Working...");
+            Console.ReadKey();
         }
     }
 }
